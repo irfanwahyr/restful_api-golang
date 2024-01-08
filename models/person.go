@@ -10,3 +10,10 @@ type Person struct {
 	CreatedAt time.Time `json:"created_at"`
 	UpdatedAt time.Time `json:"update_at"`
 }
+
+type PersonAddress struct {
+	Id        uint      `gorm:"primarykey" json:"id"`
+	Name      string    `json:"name"`
+	Email     string    `json:"email"`
+	Umur      uint      `json:"umur"`
+}
