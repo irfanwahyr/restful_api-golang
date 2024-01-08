@@ -25,7 +25,7 @@ func ConnectDB() {
 		panic(err)
 	}
 
-	db.AutoMigrate(&models.Person{})
+	db.AutoMigrate(&models.Person{}, &models.Address{})
 
 	DB = db
 	log.Println("database connect")

@@ -8,6 +8,7 @@ import (
 	"latihan_golang/models"
 	"net/http"
 	"strconv"
+
 	"github.com/gorilla/mux"
 	"gorm.io/gorm"
 )
@@ -61,7 +62,7 @@ func Detail(w http.ResponseWriter, r *http.Request) {
 
 }
 
-func Update(w http.ResponseWriter, r *http.Request)  {
+func Update(w http.ResponseWriter, r *http.Request) {
 	ParamsId := mux.Vars(r)["id"]
 
 	id, _ := strconv.Atoi(ParamsId)
@@ -92,7 +93,7 @@ func Update(w http.ResponseWriter, r *http.Request)  {
 	helper.Response(w, 201, "Success Update Data", nil)
 }
 
-func Delete(w http.ResponseWriter, r *http.Request)  {
+func Delete(w http.ResponseWriter, r *http.Request) {
 	ParamsId := mux.Vars(r)["id"]
 
 	id, _ := strconv.Atoi(ParamsId)
